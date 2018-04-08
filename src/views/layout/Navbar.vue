@@ -2,7 +2,7 @@
   <div class="left-side">
     <div class="left-inside">
       <div>
-        {{ $store.state.count }}
+        {{ $store.state.company }}
       </div>
       <ul>
         <li class="haha">
@@ -18,6 +18,7 @@
           <router-link to="/forth">第四页</router-link>
         </li>
       </ul>
+      <button @click="send();">点我啊</button>
     </div>
   </div>
 </template>
@@ -29,7 +30,19 @@ export default {
       msg: 'sfssd'
     }
   },
-  store
+  store,
+  methods: {
+    send() {
+      this.$ajax.get('https://dev2b.jidao.ren/applyer/test/74').then(respone => {
+        this.msg='成功';
+        alert("1");
+      }, respone => {
+        alert("2")
+      }).catch(respone =>{
+        alert(this.data);
+      })
+    }
+  }
 }
 
 </script>

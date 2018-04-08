@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios'
 import 'normalize.css';
 
-
+Vue.prototype.$ajax = axios;
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
