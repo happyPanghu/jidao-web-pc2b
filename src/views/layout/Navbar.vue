@@ -24,7 +24,6 @@
 <script>
 import store from '@/vuex/store'
 export default {
-  name: 'Navbar',
   data() {
     return {
       msg: 'sfssd'
